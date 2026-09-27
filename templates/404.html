@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block title %}Page introuvable · {{ profile.name }}{% endblock %}
+{% block content %}
+<section class="hero hero--small">
+  <div class="wrap">
+    <h1 class="display">Cette page n'existe pas.</h1>
+    <p class="lead">Le lien est peut-être incorrect ou la page a été déplacée.</p>
+    <a class="btn btn--light" href="{{ url_for('index') }}">Revenir à l'accueil</a>
+  </div>
+</section>
+{% endblock %}

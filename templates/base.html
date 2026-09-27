@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block title %}{{ profile.name }} {{ profile.surname }} · Portfolio{% endblock %}</title>
+  <meta name="description" content="{{ profile.tagline }}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+  <a class="skip" href="#main">Aller au contenu</a>
+  <header class="site-header">
+    <nav class="nav wrap" aria-label="Navigation principale">
+      <a class="brand" href="{{ url_for('index') }}#top">{{ profile.name }} <span>R.</span></a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links">Menu</button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="{{ url_for('index') }}#parcours">Parcours</a></li>
+        <li><a href="{{ url_for('index') }}#experiences">Expériences</a></li>
+        <li><a href="{{ url_for('index') }}#projets">Projets</a></li>
+        <li><a class="nav-cta" href="{{ url_for('index') }}#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+    {% block content %}{% endblock %}
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <p>© {{ profile.name }} {{ profile.surname }}</p>
+      <a href="mailto:{{ contact.email }}">{{ contact.email }}</a>
+    </div>
+  </footer>
+
+  <script src="{{ url_for('static', filename='js/main.js') }}" defer></script>
+</body>
+</html>
