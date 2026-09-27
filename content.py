@@ -225,5 +225,5 @@ CONTACT = {
     "phone": "032 66 056 11",
     "phone_link": "+261326605611",
     # Remplacer par l'URL réelle du profil LinkedIn
-    "linkedin": {"label": "Tsifoina RANDRIANARIVONANTOANINA", "url": ""},
+    "linkedin": {"label": "Tsifoina RANDRIANARIVONANTOANINA", "url": "https://www.linkedin.com/in/ampoka-tsifoina-randrianarivonantoanina-12930426a/"},
 }
